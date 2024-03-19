@@ -9,5 +9,6 @@ CREATE TABLE IF NOT EXISTS users (
     password VARCHAR(255) NOT NULL,
     role VARCHAR(20) NOT NULL
 );
-
+INSERT INTO users (Email, password, role)
+VALUES ('dev@ims.com', 'dev123', 'admin');
 FLUSH PRIVILEGES;
