@@ -76,10 +76,13 @@
                          <div class="home-info">
                              <!--  <h3>professional landing page</h3> -->
                               <h1>We help you manage your issued company devices inventory with ease</h1>
-                              
-                              <div class="bcenter">
-                                   <h1 class="ben" >Login</h1>
-                                   <form method="post">
+
+                              {% if login_form %}
+                              <div class="center">
+                                   <h1>Login</h1>
+                                   <form method="post" action="{% url 'login' %}>
+                                        {% csrf_token %}
+                                         {{ login_form.as_p }}
                                      <div class="txt_field">
                                        <input type="text" required />
                                        <span></span>
