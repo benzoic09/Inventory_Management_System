@@ -82,6 +82,7 @@
                                    <h1>Login</h1>
                                    <form method="post" action="{% url 'index' %}">
                                         {% csrf_token %}
+                                        {{ login_form.non_field_errors }}
                                         {{ login_form.as_p }}
                                      <!-- <div class="txt_field">
                                        <input type="text" required />
