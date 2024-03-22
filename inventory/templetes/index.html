@@ -74,16 +74,16 @@
 
                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                          <div class="home-info">
-                             <!--  <h3>professional landing page</h3> -->
-                              <h1>We help you manage your issued company devices inventory with ease</h1>
+                              <h3>Inventory Management System </h3>
+                              <h1>We help you manage your website successfully!</h1>
 
+                              <!-- Login form -->
                               {% if login_form %}
-                              <div class="center">
                                    <h1>Login</h1>
-                                   <form method="post" action="{% url 'login' %}>
+                                   <form method="post" action="{% url 'index' %}">
                                         {% csrf_token %}
-                                         {{ login_form.as_p }}
-                                     <div class="txt_field">
+                                        {{ login_form.as_p }}
+                                     <!-- <div class="txt_field">
                                        <input type="text" required />
                                        <span></span>
                                        <label>Username</label>
@@ -92,19 +92,17 @@
                                        <input type="password" required />
                                        <span></span>
                                        <label>Password</label>
-                                     </div>
+                                     </div> -->
                                      <div class="pass">Forgot Password?</div>
                                      <input type="submit" value="Login" />
-                                     </form>
-                              </div>
+                                   </form>
+                                   {% endif %}
                          </div>
                     </div>
 
                </div>
           </div>
      </section>
-
-
 
 
      <!-- CONTACT -->
