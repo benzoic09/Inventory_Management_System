@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Device Types</title>
+</head>
+<body>
+    <h1>Device Types</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Model</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for devicetype in devicetypes %}
+            <tr>
+                <td>{{ devicetype.id }}</td>
+                <td>{{ devicetype.model }}</td>
+                <td>{{ devicetype.type }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
