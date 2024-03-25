@@ -118,3 +118,11 @@
 #check:checked ~ .sidebar_menu .btn_two i{
   opacity: 1;
 }
+
+.main_box.main_bar{
+position: relative;
+height: auto;
+width: auto;
+padding: 20px;
+margin-top: 20px;
+}

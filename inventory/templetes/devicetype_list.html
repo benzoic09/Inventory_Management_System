@@ -1,14 +1,11 @@
 {% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Device Types</title>
-</head>
-<body>
+{% block title %} devtype {% endblock %}
+
+{% block content %}
     <h1>Device Types</h1>
-    <table>
+    <a href="{% url 'add_device_type' %}" class="add-button">Add Device Type</a>
+    <table class="device-types-table">
         <thead>
             <tr>
                 <th>ID</th>
@@ -26,5 +23,4 @@
             {% endfor %}
         </tbody>
     </table>
-</body>
-</html>
+    {% endblock %}
