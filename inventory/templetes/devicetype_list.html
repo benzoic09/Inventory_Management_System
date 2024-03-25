@@ -1,12 +1,8 @@
 {% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Device Types</title>
-</head>
-<body>
+{% block title %} devtype {% endblock %}
+
+{% block content %}
     <h1>Device Types</h1>
     <table>
         <thead>
@@ -26,5 +22,4 @@
             {% endfor %}
         </tbody>
     </table>
-</body>
-</html>
+    {% endblock %}
