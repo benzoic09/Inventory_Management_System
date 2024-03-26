@@ -3,8 +3,8 @@ from django.utils import timezone
 
 # Create your models here.
 class devicetype(models.Model):
-    model = models.CharField(max_length=250)
-    type = models.TextField()
+    model = models.CharField(max_length=50)
+    type = models.CharField(max_length=50)
     status = models.CharField(max_length=2, choices=(('1','Active'),('2','Inactive')), default=1)
     date_created = models.DateTimeField(default=timezone.now)
     date_updated = models.DateTimeField(auto_now=True)
