@@ -9,26 +9,30 @@
 </head>
 <body>
     <aside>
-        <p>Menu</p>
+        <p> INVETORY SYSTEM </p>
         <a href="javascript:void(0)">
             <i class="fa fa-user-o" aria-hidden="true"></i>
-            My drive
+            DASHBOARD
         </a>
         <a href="javascript:void(0)">
           <i class="fa fa-laptop" aria-hidden="true"></i>
-          Computers
+          ALLOCATIONS
         </a>
-        <a href="javascript:void(0)">
+        <a href="{% url 'Devices' %}">
           <i class="fa fa-clone" aria-hidden="true"></i>
-          Shared with me
+          DEVICES
         </a>
         <a href="javascript:void(0)">
           <i class="fa fa-star-o" aria-hidden="true"></i>
-          Starred
+          EMPLOYEE LIST
+        </a>
+        <a href="{% url 'device_type' %}">
+          <i class="fa fa-trash-o" aria-hidden="true"></i>
+          DEVICE TYPE
         </a>
         <a href="javascript:void(0)">
           <i class="fa fa-trash-o" aria-hidden="true"></i>
-          Trash
+          SETTINGS
         </a>
     </aside>
     <div class="content">

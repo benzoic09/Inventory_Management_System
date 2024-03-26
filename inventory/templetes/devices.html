@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %} devices {% endblock %}
+
+{% block content %}
+    <h1>Device </h1>
+    <a href="{% url 'add_device' %}" class="add-button">Add Device </a>
+    <table class="device-types-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>MAC ADDRESS</th>
+                <th>SERIAL NUMBER</th>
+                <th>MOBILE NUMBER</th>
+                <th>MODEL</th>
+                <th>COVER</th>
+                <th>STATUS</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for devicetype in devicetypes %}
+            <tr>
+                <td>{{ devicetype.id }}</td>
+                <td>{{ devicetype.MacAddress }}</td>
+                <td>{{ devicetype.SerialNo }}</td>
+                <td>{{ devicetype.MobileNo }}</td>
+                <td>{{ devicetype.Model }}</td>
+                <td>{{ devicetype.Cover }}</td>
+                <td>{{ devicetype.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}

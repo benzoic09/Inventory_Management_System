@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login
-from .models import devicetype, devices, employees
-from .forms import DeviceTypeForm
+from .models import devicetype, Devices, employees
+from .forms import DeviceTypeForm, DeviceForm
 
 # Create your views here.
 def index(request):
@@ -35,3 +35,17 @@ def add_device_type(request):
         form = DeviceTypeForm()
         return render(request, 'add_device_type.html', {'form': form})
 
+def device_list(request):
+    device_list = Devices.objects.all()
+    return render(request, 'devices.html', {'devices': device_list})
+
+
+def add_device(request):
+    if request.method == 'POST':
+        form = DeviceForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('device_list')
+    else:
+        form = DeviceForm()
+        return render(request, 'add_device.html', {'form': form})

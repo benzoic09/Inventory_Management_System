@@ -12,12 +12,11 @@ class devicetype(models.Model):
     def __str__(self):
         return self.model
     
-class devices(models.Model):
-    MacAddress=models.CharField(max_length=100,blank=True, null=True)
-    SerialNo=models.CharField(max_length=250,blank=True, null=True) #this can be blank
-    MobileNo = models.TextField()
+class Devices(models.Model):
+    MacAddress=models.CharField(max_length=50,blank=True, null=True)
+    SerialNo=models.CharField(max_length=50,blank=True, null=True) #this can be blank
+    MobileNo = models.CharField(max_length=10,blank=False, null=False)
     Model = models.ForeignKey(devicetype, on_delete=models.PROTECT)
-    ScreenProtector = models.BooleanField(default=False)
     Cover = models.BooleanField(default=False)
     status = models.CharField(max_length=2, choices=(('1','Active'),('2','Damaged'),('3','Dead')), default=1)
     date_created = models.DateTimeField(default=timezone.now)
