@@ -76,6 +76,7 @@ body {
   height: 14px;
   font-size: 14px;
   position: fixed;
+<<<<<<< HEAD
   color: #fff;
   background: #0077B5;
   padding: 10px;
@@ -131,3 +132,21 @@ body {
 .add-button:hover {
   background-color: #0056b3;
 }
+=======
+  color: #fff;
+  background: #0077B5;
+  padding: 10px;
+  border-radius: 50%;
+  top:5px;
+  right:5px;
+}
+
+.content {
+  position: absolute;
+	top: 0;
+	margin-left: 300px; /* Adjust the margin to position content to the right of the sidebar */
+  padding: 20px; /* Add padding to the content */
+  height: 100vh; /* Set the height to full viewport height */
+  overflow-y: auto; /* Add vertical scrollbar if content overflows */
+}
+>>>>>>> 6a513c1124d07441ef5e0be67dafc940232a921f
