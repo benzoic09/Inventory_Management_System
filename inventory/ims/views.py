@@ -31,6 +31,7 @@ def add_device_type(request):
         if form.is_valid():
             form.save()
             return redirect('devicetype_list')
-        else:
-            form = DeviceTypeForm()
-            return render(request, 'add_device_type.html', {'form': form})
+    else:
+        form = DeviceTypeForm()
+        return render(request, 'add_device_type.html', {'form': form})
+
