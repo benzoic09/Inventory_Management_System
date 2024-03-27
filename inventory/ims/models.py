@@ -18,12 +18,12 @@ class Devices(models.Model):
     MobileNo = models.CharField(max_length=10,blank=False, null=False)
     Model = models.ForeignKey(devicetype, on_delete=models.PROTECT)
     Cover = models.BooleanField(default=False)
-    status = models.CharField(max_length=2, choices=(('1','Active'),('2','Damaged'),('3','Dead')), default=1)
+    status = models.CharField(max_length=1, choices=(('A','Active'),('D','Damaged'),('D','Dead')), default='A')
     date_created = models.DateTimeField(default=timezone.now)
     date_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.MacAddress + ' - ' + self.Model # to reseaech more on this 
+        return self.MacAddress
 
 
 class branch(models.Model):
