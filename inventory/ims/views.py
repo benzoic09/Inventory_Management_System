@@ -45,7 +45,7 @@ def add_device(request):
         form = DeviceForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('Devices')
+            return redirect('device_list')
     else:
         form = DeviceForm()
         return render(request, 'add_device.html', {'form': form})

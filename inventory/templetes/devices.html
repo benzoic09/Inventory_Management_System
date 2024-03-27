@@ -3,7 +3,7 @@
 {% block title %} devices {% endblock %}
 
 {% block content %}
-    <h1>Device </h1>
+    <h1>Device LIST</h1>
     <a href="{% url 'add_device' %}" class="add-button">Add Device </a>
     <table class="device-types-table">
         <thead>
@@ -18,15 +18,15 @@
             </tr>
         </thead>
         <tbody>
-            {% for devicetype in devicetypes %}
+            {% for device in devices %}
             <tr>
-                <td>{{ devicetype.id }}</td>
-                <td>{{ devicetype.MacAddress }}</td>
-                <td>{{ devicetype.SerialNo }}</td>
-                <td>{{ devicetype.MobileNo }}</td>
-                <td>{{ devicetype.Model }}</td>
-                <td>{{ devicetype.Cover }}</td>
-                <td>{{ devicetype.status }}</td>
+                <td>{{ device.id }}</td>
+                <td>{{ device.MacAddress }}</td>
+                <td>{{ device.SerialNo }}</td>
+                <td>{{ device.MobileNo }}</td>
+                <td>{{ device.Model }}</td>
+                <td>{{ device.Cover }}</td>
+                <td>{{ device.status }}</td>
             </tr>
             {% endfor %}
         </tbody>
