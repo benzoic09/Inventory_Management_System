@@ -8,5 +8,6 @@ urlpatterns = [
     path('add_device_type/', views.add_device_type, name='add_device_type'),
     path('devices/',views.device_list, name='device_list'),
     path('adddevice/', views.add_device, name='add_device'),
-#     path('employees/', views.employees_list, name='employees_list'),
+    path('employees/', views.employee_list, name='employee_list'),
+    path('addempy/',views.add_employeee, name='add_employeee'),
 ]

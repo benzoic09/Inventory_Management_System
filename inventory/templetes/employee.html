@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %} employees {% endblock %}
+
+{% block content %}
+    <h1>EMPLOYEE LIST</h1>
+    <a href="{% url 'add_employeee' %}" class="add-button">Add EMPLOYEE </a>
+    <table class="device-types-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>EMPNO</th>
+                <th>NAME</th>
+                <th>DEPARTMENT</th>
+                <th>BRANCH</th>
+                <th>BUSINESS UNIT</th>
+                <!-- <th>STATUS</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees  %}
+            <tr>
+                <td>{{ device.id }}</td>
+                <td>{{ device.MacAddress }}</td>
+                <td>{{ device.SerialNo }}</td>
+                <td>{{ device.MobileNo }}</td>
+                <td>{{ device.Model }}</td>
+                <td>{{ device.Cover }}</td>
+                <td>{{ device.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}
