@@ -76,7 +76,6 @@ body {
   height: 14px;
   font-size: 14px;
   position: fixed;
-<<<<<<< HEAD
   color: #fff;
   background: #0077B5;
   padding: 10px;
@@ -132,7 +131,6 @@ body {
 .add-button:hover {
   background-color: #0056b3;
 }
-=======
   color: #fff;
   background: #0077B5;
   padding: 10px;
@@ -149,4 +147,57 @@ body {
   height: 100vh; /* Set the height to full viewport height */
   overflow-y: auto; /* Add vertical scrollbar if content overflows */
 }
->>>>>>> 6a513c1124d07441ef5e0be67dafc940232a921f
+
+/* CSS for dashbaord for home.html */
+/* dashboard.css */
+
+/* Main Content Styles */
+.main-content {
+  margin-left: 220px; /* Adjust as needed */
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.column {
+  flex: 0 1 calc(33.33% - 20px); /* Adjust column width */
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.column h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.count {
+  font-size: 20px; /* Adjust font size */
+}
+
+.status {
+  font-size: 16px; /* Adjust font size */
+  color: #007bff;
+}
