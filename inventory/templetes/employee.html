@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} employees {% endblock %}
+
+{% block content %}
+    <h1>EMPLOYEE LIST</h1>
+    <a href="{% url 'add_employeee' %}" class="add-button">Add EMPLOYEE </a>
+    <table class="device-types-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>EMPNO</th>
+                <th>NAME</th>
+                <th>DEPARTMENT</th>
+                <th>BRANCH</th>
+                <!-- <th>BUSINESS UNIT</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for employees in employees_list  %}
+            <tr>
+                <td>{{ employees.id }} </td>
+                <td>{{ employees.empno }}</td>
+                <td>{{ employees.Name }}</td>
+                <td>{{ employees.Department }}</td>
+                <td>{{ employees.branch }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}

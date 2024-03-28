@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login
 from .models import devicetype, Devices, employees
-from .forms import DeviceTypeForm, DeviceForm
+from .forms import DeviceTypeForm, DeviceForm, employeeForm
 
 # Create your views here.
 def index(request):
@@ -24,7 +24,7 @@ def devicetype_list(request):
     devicetypes = devicetype.objects.all()
     return render(request, 'devicetype_list.html', {'devicetypes': devicetypes})
 
-
+# Devices  
 def add_device_type(request):
     if request.method == 'POST':
         form = DeviceTypeForm(request.POST)
@@ -49,3 +49,20 @@ def add_device(request):
     else:
         form = DeviceForm()
         return render(request, 'add_device.html', {'form': form})
+    
+
+   # emplpoyess 
+def employee_list(request):
+    employees_list = employees.objects.all()
+    return render(request, 'employee.html', {'employee': employees_list})
+
+
+def add_employeee(request):
+    if request.method == 'POST':
+        form = employeeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('employees_list')
+    else:
+        form = employeeForm()
+        return render(request, 'add_employee.html', {'form': form})
