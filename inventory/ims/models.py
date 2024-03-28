@@ -37,5 +37,9 @@ class employees(models.Model):
     def __str__(self):
         return self.empno
 
-
+class Assignment(models.Model):
+    user = models.ForeignKey(employees, on_delete=models.PROTECT)
+    device = models.ForeignKey(Devices, on_delete=models.PROTECT)
+    date_created = models.DateTimeField(default=timezone.now)
+    date_updated = models.DateTimeField(auto_now=True)
 
