@@ -4,7 +4,7 @@
 
 {% block content %}
     <h1>EMPLOYEE LIST</h1>
-    <a href="{% url 'add_employeee' %}" class="add-button">Add EMPLOYEE </a>
+    <a href="{% url 'add_employee' %}" class="add-button">Add EMPLOYEE </a>
     <table class="device-types-table">
         <thead>
             <tr>
@@ -17,15 +17,16 @@
             </tr>
         </thead>
         <tbody>
-            {% for employees in employees_list  %}
+            {% for employee in employees_list %}
             <tr>
-                <td>{{ employees.id }} </td>
-                <td>{{ employees.empno }}</td>
-                <td>{{ employees.Name }}</td>
-                <td>{{ employees.Department }}</td>
-                <td>{{ employees.branch }}</td>
+                <td>{{ employee.id }}</td>
+                <td>{{ employee.empno }}</td>
+                <td>{{ employee.Name }}</td>
+                <td>{{ employee.Department }}</td>
+                <td>{{ employee.branch }}</td>
             </tr>
-            {% endfor %}
+        {% endfor %}
+        
         </tbody>
     </table>
     {% endblock %}
