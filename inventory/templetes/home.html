@@ -1,3 +1,40 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 
-<h1>This is our inventory page afrer login page </h1> 
+{% block title%}
+
+DASHBOARD
+
+{% endblock %}
+
+{% block content %}
+<!-- Main Content -->
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{ % static 'css/base.css' % }">
+{% endblock css %}
+
+<div class="main-content">
+  <h1>Inventory Management Dashboard</h1>
+  <!-- Add Allocation Button -->
+  <button id="allocateDevicesBtn" class="btn btn-primary">Allocate Devices</button>
+  <!-- Three Columns -->
+  <div class="columns">
+      <div class="column">
+          <h2>Allocated Devices</h2>
+          <!-- Display allocated devices count here -->
+          <p class="count">100</p>
+      </div>
+      <div class="column">
+          <h2>All Devices</h2>
+          <!-- Display total devices count here -->
+          <p class="count">500</p>
+      </div>
+      <div class="column">
+          <h2>Device Status</h2>
+          <!-- Display device status here -->
+          <p class="status">Available</p>
+      </div>
+  </div>
+</div>
+
+{%endblock%}
+ 
