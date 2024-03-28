@@ -12,7 +12,7 @@ class DeviceForm(forms.ModelForm):
         model = Devices 
         fields = ['MacAddress','SerialNo','MobileNo','Model','Cover','status' ]
 
-class employeeForm(forms.ModelForm):
+class EmployeeForm(forms.ModelForm):
     class Meta:
         model =  employees
         fields = ['empno','Name','Department','branch',]
