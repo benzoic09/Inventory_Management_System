@@ -53,8 +53,8 @@ def add_device(request):
 
    # emplpoyess 
 def employee_list(request):
-    employee_list = employees.objects.all()
-    return render(request, 'employee.html', {'employee': employee_list})
+    employees_list = employees.objects.all()
+    return render(request, 'employee.html', {'employee': employees_list})
 
 
 def add_employeee(request):
@@ -62,7 +62,7 @@ def add_employeee(request):
         form = employeeForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('employee_list')
+            return redirect('employees_list')
     else:
         form = employeeForm()
         return render(request, 'add_employee.html', {'form': form})

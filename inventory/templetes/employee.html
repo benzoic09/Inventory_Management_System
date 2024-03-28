@@ -13,20 +13,17 @@
                 <th>NAME</th>
                 <th>DEPARTMENT</th>
                 <th>BRANCH</th>
-                <th>BUSINESS UNIT</th>
-                <!-- <th>STATUS</th> -->
+                <!-- <th>BUSINESS UNIT</th> -->
             </tr>
         </thead>
         <tbody>
-            {% for employee in employees  %}
+            {% for employees in employees_list  %}
             <tr>
-                <td>{{ device.id }}</td>
-                <td>{{ device.MacAddress }}</td>
-                <td>{{ device.SerialNo }}</td>
-                <td>{{ device.MobileNo }}</td>
-                <td>{{ device.Model }}</td>
-                <td>{{ device.Cover }}</td>
-                <td>{{ device.status }}</td>
+                <td>{{ employees.id }} </td>
+                <td>{{ employees.empno }}</td>
+                <td>{{ employees.Name }}</td>
+                <td>{{ employees.Department }}</td>
+                <td>{{ employees.branch }}</td>
             </tr>
             {% endfor %}
         </tbody>

@@ -15,4 +15,4 @@ class DeviceForm(forms.ModelForm):
 class employeeForm(forms.ModelForm):
     class Meta:
         model =  employees
-        fields = ['empno','Name','Department','branch','BusinessUnit',]
+        fields = ['empno','Name','Department','branch',]
