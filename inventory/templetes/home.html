@@ -1,15 +1,12 @@
 {% extends 'base.html' %} 
 
-{% block title%}
-
-DASHBOARD
-
-{% endblock %}
+{% block title %} Dashboard {% endblock %}
 
 {% block content %}
 <!-- Main Content -->
 {% block css %}
-<link rel="stylesheet" type="text/css" href="{ % static 'css/base.css' % }">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
 {% endblock css %}
 
 <div class="main-content">
@@ -36,5 +33,4 @@ DASHBOARD
   </div>
 </div>
 
-{%endblock%}
- 
+{% endblock %}
