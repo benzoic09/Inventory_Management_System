@@ -1,5 +1,5 @@
 from django import forms
-from .models import devicetype, Devices, employees
+from .models import devicetype, Devices, employees, Assignment
 
 class DeviceTypeForm(forms.ModelForm):
     class Meta:
@@ -15,4 +15,10 @@ class DeviceForm(forms.ModelForm):
 class EmployeeForm(forms.ModelForm):
     class Meta:
         model =  employees
-        fields = ['empno','Name','Department','branch',]
+        fields = ['empno','Name','Department','branch']
+
+
+class AssignmentForm(forms.ModelForm):
+    class Meta:
+        model = Assignment
+        fields = ['user','device']

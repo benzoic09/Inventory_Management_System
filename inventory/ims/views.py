@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login
 from .models import devicetype, Devices, employees
-from .forms import DeviceTypeForm, DeviceForm, EmployeeForm
+from .forms import DeviceTypeForm, DeviceForm, EmployeeForm, AssignmentForm
 
 # Create your views here.
 def index(request):
@@ -67,3 +67,15 @@ def add_employee(request):
     else:
         form = EmployeeForm()
     return render(request, 'add_employee.html', {'form': form})
+
+
+   # View for Assignment
+def add_assignment(request):
+    if request.method == 'POST':
+        form = add_assignment(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = AssignmentForm()
+    return render(request, 'add_assignment.html', {'form': form})

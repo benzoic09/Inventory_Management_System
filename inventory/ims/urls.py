@@ -10,5 +10,6 @@ urlpatterns = [
     path('adddevice/', views.add_device, name='add_device'),
     path('employees/', views.employee_list, name='employee_list'),
     path('addemployee/', views.add_employee, name='add_employee'),
+    path('add_assignment/',views.add_assignment, name='add_asssignment'),
 
 ]
