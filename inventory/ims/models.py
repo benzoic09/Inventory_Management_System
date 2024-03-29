@@ -43,3 +43,5 @@ class Assignment(models.Model):
     date_created = models.DateTimeField(default=timezone.now)
     date_updated = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.user

@@ -72,7 +72,7 @@ def add_employee(request):
    # View for Assignment
 def add_assignment(request):
     if request.method == 'POST':
-        form = add_assignment(request.POST)
+        form = AssignmentForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('home')
