@@ -12,8 +12,7 @@
 <div class="main-content">
   <h1>Inventory Management Dashboard</h1>
   <!-- Add Allocation Button -->
-  <a href="{% url 'add_asssignment' %}" class="add-button">Allocate Devices </a>
-  <!-- <button  id="allocateDevicesBtn" class="btn btn-primary">Allocate Devices</button> -->
+  <a href="{% url 'add_asssignment' %}" class="add-button">Allocate Devices</a>
   <!-- Three Columns -->
   <div class="columns">
       <div class="column">
@@ -34,29 +33,23 @@
   </div>
 </div>
 
-<!-- importing the table to dosplay allocated devices  -->
+<!-- Display Allocated Devices Table -->
 <table class="device-types-table">
     <thead>
         <tr>
             <th>ID</th>
-            <th>USER</th>
-            <th>DEVICE</th>
-            <!-- <th>MOBILE NUMBER</th>
-            <th>MODEL</th>
-            <th>COVER</th>
-            <th>STATUS</th> -->
+            <th>User</th>
+            <th>Device</th>
+            <th>Device MAC Address</th>
         </tr>
     </thead>
     <tbody>
         {% for assignment in assignments %}
         <tr>
             <td>{{ assignment.id }}</td>
-            <td>{{ assignment.user }}</td>
+            <td>{{ assignment.user.Name }}</td>
             <td>{{ assignment.device }}</td>
-            <!-- <td>{{ device.MobileNo }}</td>
-            <td>{{ device.Model }}</td>
-            <td>{{ device.Cover }}</td>
-            <td>{{ device.status }}</td> -->
+            <td>{{ assignment.device.MacAddress }}</td>
         </tr>
         {% endfor %}
     </tbody>
