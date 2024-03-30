@@ -22,3 +22,7 @@ class AssignmentForm(forms.ModelForm):
     class Meta:
         model = Assignment
         fields = ['user','device']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['user'].label_from_instance = lambda obj:obj.Name

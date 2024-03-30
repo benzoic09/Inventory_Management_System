@@ -79,3 +79,8 @@ def add_assignment(request):
     else:
         form = AssignmentForm()
     return render(request, 'add_assignment.html', {'form': form})
+
+#perform serch logic 
+def search_device(request):
+    if request.method == 'GET':
+        mac
