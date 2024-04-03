@@ -39,7 +39,7 @@
         <tr>
             <th>ID</th>
             <th>User</th>
-            <th>Device</th>
+            <th>MODEL</th>
             <th>Device MAC Address</th>
         </tr>
     </thead>
@@ -48,7 +48,7 @@
         <tr>
             <td>{{ assignment.id }}</td>
             <td>{{ assignment.user.Name }}</td>
-            <td>{{ assignment.device }}</td>
+            <td>{{ assignment.device.Model  }}</td>
             <td>{{ assignment.device.MacAddress }}</td>
         </tr>
         {% endfor %}
