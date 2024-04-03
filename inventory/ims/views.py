@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login
-from .models import devicetype, Devices, employees
+from .models import devicetype, Devices, employees, Assignment
 from .forms import DeviceTypeForm, DeviceForm, EmployeeForm, AssignmentForm
 
 # Create your views here.
@@ -18,7 +18,8 @@ def index(request):
 
 
 def home(request):
-    return render(request, 'home.html')
+    assignments = Assignment.objects.all()
+    return render(request, 'home.html', {'assignments': assignments})
 
 def devicetype_list(request):
     devicetypes = devicetype.objects.all()
