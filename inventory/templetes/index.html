@@ -1,162 +1,198 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<title>Inventory</title>
-	
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="team" content="">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>IMS</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-     <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
-     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
-     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-     <!-- MAIN CSS -->
-     <link rel="stylesheet" href="{% static 'css/tooplate-style.css' %}">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Arsha
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
+
 <body>
 
-     <!-- PRE LOADER -->
-     <section class="preloader">
-          <div class="spinner">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
 
-               <span class="spinner-rotate"></span>
-               
+      <h1 class="logo me-auto"><a href="index.html">MOBILE MANAGEMENT SYSTEM (MMS)</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#services">Services</a></li> -->
+          <!-- <li><a class="nav-link   scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
+          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li> -->
+          <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
+          <li><a class="getstarted scrollto" href="#cta">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Better Solutions For Your Business</h1>
+          <h2>Streamline your inventory management and phone assignment process with our intuitive system.</h2>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
-     </section>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="static/img/hero-img.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
 
 
-     <!-- MENU -->
-     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
-          <div class="container">
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
 
-               <div class="navbar-header">
-                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                    </button>
+        <div class="section-title">
+          <h2>WHY MMS</h2>
+        </div>
 
-                    <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand">Inventory management system </a>
-               </div>
-
-               <!-- MENU LINKS -->
-
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              Inventory management is a critical aspect of running any business, regardless of its size or industry. 
+              An effective inventory management system (IMS) is essential for businesses to maintain optimal levels of stock, minimize costs, and maximize efficiency.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Web based  MMS allows for real-time tracking of inventory levels, reducing the risk of stockouts or overstocking.</li>
+              <li><i class="ri-check-double-line"></i> With centralized data storage and automated updates, web-based systems provide accurate and up-to-date information on inventory levels</li>
+              <li><i class="ri-check-double-line"></i>  Web-based inventory management systems facilitate collaboration and communication across departments and locations.</li>
+            </ul>
           </div>
-     </section>
-
-
-     <!-- FEATURE -->
-     <section id="home" data-stellar-background-ratio="0.5">
-          <div class="overlay"></div>
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-offset-3 col-md-6 col-sm-12">
-                         <div class="home-info">
-                              <h3>Inventory Management System </h3>
-                              <h1>We help you manage your company Inventory  successfully!</h1>
-
-                              <!-- Login form -->
-                              {% if login_form %}
-                                   <h1>Login</h1>
-                                   <form method="post" action="{% url 'index' %}">
-                                        {% csrf_token %}
-                                        {{ login_form.non_field_errors }}
-                                        {{ login_form.as_p }}
-                                     <!-- <div class="txt_field">
-                                       <input type="text" required />
-                                       <span></span>
-                                       <label>Username</label>
-                                     </div>
-                                     <div class="txt_field">
-                                       <input type="password" required />
-                                       <span></span>
-                                       <label>Password</label>
-                                     </div> -->
-                                     <div class="pass">Forgot Password?</div>
-                                     <input type="submit" value="Login" />
-                                   </form>
-                                   {% endif %}
-                         </div>
-                    </div>
-
-               </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              we'll explore key reasons why an inventory management system is crucial for businesses today. 
+              From improving operational efficiency to enhancing user satisfaction, 
+              a robust IMS can have a significant impact on the success and profitability of a business.
+            </p>
+            <a href="#" class="btn-learn-more">Learn More</a>
           </div>
-     </section>
+        </div>
+
+      </div>
+    </section>
+    <!-- End About Us Section -->
 
 
-     <!-- CONTACT -->
-     <section id="contact" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
+   <!-- ======= Cta Section ======= -->
+<section id="cta" class="cta">
+     <div class="container" data-aos="zoom-in">
+   
+       <div class="row">
+         <div class="col-lg-9 text-center text-lg-start">
+           <h3>Welcome, Admin</h3>
+           <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         </div>
+         <div class="col-lg-3 cta-btn-container text-center">
+          <!-- login form -->
+          {% if login_form %}
+          <form method="post" action="{% url 'index' %}">
+               {% csrf_token %}
+               {{ login_form.non_field_errors }}
+               {{ login_form.as_p }}
+               <button class="cta-btn align-middle" type="submit">Login</button>
+          </form>
+     
+             <!-- <a class="cta-btn align-middle" input type="submit" value="Login">Login</a> -->
+           {% endif %}
+         </div>
+       </div>
+   
+     </div>
+   </section>
+   <!-- End Cta Section -->
+   
+    
 
-                    <div class="col-md-offset-1 col-md-10 col-sm-12">
-                         <form id="contact-form" role="form" action="" method="post">
-                              <div class="section-title">
-                                   <h1>Say hello to us</h1>
-                              </div>
-
-                              <div class="col-md-4 col-sm-4">
-                                   <input type="text" class="form-control" placeholder="Full name" name="name" required="">
-                              </div>
-                              <div class="col-md-4 col-sm-4">
-                                   <input type="email" class="form-control" placeholder="Email address" name="email" required="">
-                              </div>
-                              <div class="col-md-4 col-sm-4">
-                                   <input type="submit" class="form-control" name="send message" value="Send Message">
-                              </div>
-                              <div class="col-md-12 col-sm-12">
-                                   <textarea class="form-control" rows="8" placeholder="Your message" name="message" required=""></textarea>
-                              </div>
-                         </form>
-                    </div>
-
-               </div>
-          </div>
-     </section>       
-
-
-     <!-- FOOTER -->
-     <footer id="footer" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="copyright-text col-md-12 col-sm-12">
-                         <div class="col-md-6 col-sm-6">
-                              <p>Copyright &copy; 2024 Company Name - Design:
-                				<a rel="nofollow" href="http://tooplate.com">Tooplate</a></p>
-                         </div>
-
-                         <div class="col-md-6 col-sm-6">
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                         </div>
-                    </div>
-
-               </div>
-          </div>
-     </footer>
+  </main>
+  <!-- End #main -->
 
 
-     <!-- SCRIPTS -->
-     <script src="{% static 'js/jquery.js' %}"></script>
-     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-     <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
-     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-     <script src="{% static 'js/smoothscroll.js' %}"></script>
-     <script src="{% static 'js/custom.js' %}"></script>
+  
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
 
 </body>
+
 </html>

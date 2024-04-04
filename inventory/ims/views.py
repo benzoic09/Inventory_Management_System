@@ -17,6 +17,7 @@ def index(request):
     return render(request, 'index.html', {'login_form': form})
 
 
+
 def home(request):
     assignments = Assignment.objects.all()
     return render(request, 'home.html', {'assignments': assignments})
