@@ -27,15 +27,7 @@
   <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="static/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Arsha
-  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -76,10 +68,12 @@
           <li><a class="getstarted scrollto" href="#cta">Get Started</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
+      <!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
 
@@ -92,7 +86,7 @@
           <h2>Streamline your inventory management and phone assignment process with our intuitive system.</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
             <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            <a href="https://youtu.be/-zh3wpgLH-U" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
@@ -159,8 +153,6 @@
                {{ login_form.as_p }}
                <button class="cta-btn align-middle" type="submit">Login</button>
           </form>
-     
-             <!-- <a class="cta-btn align-middle" input type="submit" value="Login">Login</a> -->
            {% endif %}
          </div>
        </div>
@@ -173,7 +165,6 @@
 
   </main>
   <!-- End #main -->
-
 
   
   <!-- End Footer -->
