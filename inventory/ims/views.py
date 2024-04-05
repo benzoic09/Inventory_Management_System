@@ -20,7 +20,16 @@ def index(request):
 
 def home(request):
     assignments = Assignment.objects.all()
-    return render(request, 'home.html', {'assignments': assignments})
+    #Count allocated devices
+    allocated_devices_count  = assignments.count()
+    #create device obj and count devices
+    device_count = Devices.objects.all()
+    device_list_count = device_count.count
+     # Pass count and queryset to template context
+    context= {
+        'allocated_devices_count':allocated_devices_count, 'assignments':assignments,
+        'device_list_count':device_list_count}
+    return render(request, 'home.html', context)
 
 def devicetype_list(request):
     devicetypes = devicetype.objects.all()
