@@ -8,7 +8,7 @@ Organizations always require an efficient method to track and manage the diverse
 
 ### Articles/reasorces 
 **Deployed URL:** https://benzoic09.github.io/
-**Article blog:** https://bentechnews.blogspot.com/2024/04/building-mobile-inventory-management.html
+**Blog:** https://bentechnews.blogspot.com/2024/04/building-mobile-inventory-management.html
 
 ### Environment Setup
 
