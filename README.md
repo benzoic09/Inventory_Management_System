@@ -1,16 +1,16 @@
-Inventory Management System
+**Inventory Management System**
 
 Inventory, also known as stock, refers to goods a business owns, sells, or uses in production.
 
 An inventory management system, also known as inventory management software, is a computer system that helps manage inventory. It facilitates tasks such as keeping stock levels, issuing and receiving stock, and many other related tasks.
 
-Introduction
+I**ntroduction**
 
 Organizations always require an efficient method to track and manage the diverse array of devices they possess. In response to this need, we have developed a streamlined solution tailored to simplify this task. Our inventory management tool provides a comprehensive platform for organizations to monitor, track, and manage their inventory effectively. With intuitive features designed to enhance operational efficiency, our tool empowers organizations to maintain precise records of their devices, optimize stock levels, and streamline inventory operations seamlessly.
 
-Environment Setup
+**Environment Setup**
 
-Install Python
+# Install Python
 To begin, you'll need a working Python installation on your computer. You can go to https://www.python.org/downloads/ to obtain it for your PC/Mac. The instructions for installing it are available on the official Python website.
 
 Install Git

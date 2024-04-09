@@ -25,10 +25,13 @@ def home(request):
     #create device obj and count devices
     device_count = Devices.objects.all()
     device_list_count = device_count.count
+    # create and count empoyees
+    employees_list = employees.objects.all()
+    empcount = employees_list.count()
      # Pass count and queryset to template context
     context= {
         'allocated_devices_count':allocated_devices_count, 'assignments':assignments,
-        'device_list_count':device_list_count}
+        'device_list_count':device_list_count, 'empcount':empcount}
     return render(request, 'home.html', context)
 
 def devicetype_list(request):
