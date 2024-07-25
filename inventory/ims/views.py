@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login
 from .models import devicetype, Devices, employees, Assignment
@@ -64,6 +64,23 @@ def add_device(request):
         form = DeviceForm()
         return render(request, 'add_device.html', {'form': form})
     
+def edit_device(request, id):
+    devices = get_object_or_404(Devices, id=id)
+    if request.method == 'POST':
+        form = DeviceForm(request.POST, instance=devices)
+        if form.is_valid():
+            form.save()
+            return redirect(device_list)
+    else:
+        form = DeviceForm(instance=devices)
+    return render(request, 'edit_device.html',{'form': form})
+
+def delete_device(request, id):
+    device = get_object_or_404(Devices, id=id)
+    if request.method == 'POST':
+        device.delete()
+        return redirect('device_list')
+    return render(request, 'delete_device.html', {'device': device})
 
   
     # View for listing employees
